@@ -3,11 +3,11 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
-import Modal from '../components/Modal' 
+import Modal from "../components/Modal";
+import Accordion from "../components/Accordion";
 
 export default function Home() {
-  const [value, setValue] = useState(0);
-  const [isToggled, setToggle ] = useState(false);
+  const [isToggled, setToggle] = useState(false);
   return (
     <div className={styles.container}>
       <Head>
@@ -18,14 +18,20 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* <Accordion title={'hello'} body={'goodbye!'}/> */}
 
-      <button onClick={() => setToggle(true)}>Contact</button>
+      {/* <button onClick={() => setToggle(true)}>Contact</button> */}
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Joe Cee</h1>
-        <Modal isToggled={isToggled} setToggle={setToggle}>
+        <div className={styles.titleCtnr}>
+          <h1 className={styles.title}>Joe Cee</h1>
+        </div>
+        {/* <Modal isToggled={isToggled} setToggle={setToggle}>
           <div className={styles.title} animate={{opacity: isToggled }}> contact forms </div>
-        </Modal>
+        </Modal> */}
+        <section>
+          <canvas></canvas>
+        </section>
       </main>
 
       <footer className={styles.footer}>

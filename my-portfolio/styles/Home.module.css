@@ -28,9 +28,18 @@
   flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
+.title {
+  
   text-decoration: none;
+  font-family: 'Inter';
+
+}
+
+.titleCtnr {
+  position: fixed;
+  top: 1%;
+  left: 15%;
+  transform: translate3d(-50%, 0,0);
 }
 
 .title a:hover,
