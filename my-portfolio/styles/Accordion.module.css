@@ -1,0 +1,20 @@
+.accordion {
+  font-size: 1.5rem;
+  grid-area: info;
+  justify-self: right;
+  padding-right: 2rem;
+  color: white;
+}
+
+.links {
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.links a {
+  display: flex;
+  
+  
+}

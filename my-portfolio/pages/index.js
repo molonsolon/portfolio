@@ -5,7 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import Modal from "../components/Modal";
 import Accordion from "../components/Accordion";
-import Nav from '../components/Nav'  
+import Nav from '../components/Nav'
+import Ring from "../components/Ring"
+import introVector from '../public/lineVector.svg'
+import nextBtn from '../public/nextBtn.svg'
 
 export default function Home() {
   const [isToggled, setToggle] = useState(false);
@@ -19,35 +22,45 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Accordion title={'hello'} body={'goodbye!'}/> */}
 
       {/* <button onClick={() => setToggle(true)}>Contact</button> */}
 
       <main className={styles.main}>
-        <Nav></Nav>
+        <Accordion title={'my info'} className={styles.info}/>
         <div className={styles.titleCtnr}>
           <h1 className={styles.title}>Joe Cee</h1>
         </div>
         {/* <Modal isToggled={isToggled} setToggle={setToggle}>
           <div className={styles.title} animate={{opacity: isToggled }}> contact forms </div>
         </Modal> */}
-        <section>
-          <canvas></canvas>
-        </section>
+        
+        
+          <div className={styles.ringCtnr}>
+            <Ring />
+          </div>
+          <section className={styles.introTextCtnr}>
+            <h2 className={styles.line1}>Coding simply</h2>
+            <div className={styles.introVector}>
+              <Image
+                src={introVector}
+                alt="A squiggly line graphic"
+                
+              />
+            </div>
+            <h2 className={styles.line2}>for the web</h2>
+            <h2 className={styles.line3}>&</h2>
+            <h2 className={styles.line4}>b e y o n d</h2>
+        
+          </section>  
+          <div className={styles.nextCtnr}>
+            <Image 
+              src={nextBtn}
+              alt="animated button to go to next page"
+            />
+          </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+  
     </div>
   );
 }

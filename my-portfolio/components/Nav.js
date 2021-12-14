@@ -4,10 +4,10 @@ export const Nav = () => {
   return (
     <nav>
       <ul>
-        <li><a hfre="#">One</a></li>
-        <li><a hfre="#">Two</a></li>
-        <li><a hfre="#">Three</a></li>
-        <li><a hfre="#">Four</a></li>
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+        <li><a href="#">Four</a></li>
 
       </ul>
     </nav>

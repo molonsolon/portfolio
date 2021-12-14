@@ -1,0 +1,8 @@
+.ring {
+  
+  height: 100vh;
+  width: auto;
+  filter: drop-shadow(2px 5px 0px rgba(193, 179, 207, 0.77));
+
+}
+

@@ -1,125 +1,107 @@
 .container {
-  padding: 0 2rem;
+  background: radial-gradient(50% 50% at 50% 50%, #ffffff 26.04%, #10042f 100%);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-areas:
+    "title . info"
+    ". text ."
+    ". . next";
+  height: 100vh;
+  width: 100vw;
 }
 
 .title {
-  
+  color: white;
+  line-height: 1.15;
+  font-size: 4rem;
   text-decoration: none;
-  font-family: 'Inter';
-
+  font-family: "Inter";
 }
 
 .titleCtnr {
-  position: fixed;
-  top: 1%;
-  left: 15%;
-  transform: translate3d(-50%, 0,0);
+  grid-area: title;
+  padding-left: 2rem;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.centerpiece {
+  align-self: center;
+  justify-self: center;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.ringCtnr {
+  align-self: center;
+  justify-self: center;
+  z-index: 0;
+  grid-area: text;
 }
 
-.title,
-.description {
-  text-align: center;
+.introTextCtnr {
+  height: 100%;
+
+  grid-area: text;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, 20%);
+  grid-template-areas:
+    "cs cs cs"
+    "line line line"
+    "ftw ftw ftw"
+    "and . ."
+    "beyond beyond beyond";
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.introTextCtnr h2 {
+  z-index: 10;
+  justify-self: center;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.line1 {
+  grid-area: cs;
+  align-self: center;
+  font-size: 4.5rem;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+.introVector {
+  grid-area: line;
+  height: auto;
+  justify-self: center;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.line2 {
+  grid-area: ftw;
+  align-self: center;
+  font-size: 4.5rem;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.line3 {
+  grid-area: and;
+  align-self: center;
+  margin-right: 50%;
+  font-size: 10rem;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.line4 {
+  grid-area: beyond;
+  font-size: 5rem;
+  margin-top: 5%;
+  margin-right: -50%;
+  width: auto;
+  height: 100%;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.nextCtnr {
+  grid-area: next;
+  place-self: center right;
+  margin-top: -20%;
+  padding-right: 2rem;
 }
