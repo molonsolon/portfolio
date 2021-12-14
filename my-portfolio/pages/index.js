@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import Modal from "../components/Modal";
 import Accordion from "../components/Accordion";
+import Nav from '../components/Nav'  
 
 export default function Home() {
   const [isToggled, setToggle] = useState(false);
@@ -23,6 +24,7 @@ export default function Home() {
       {/* <button onClick={() => setToggle(true)}>Contact</button> */}
 
       <main className={styles.main}>
+        <Nav></Nav>
         <div className={styles.titleCtnr}>
           <h1 className={styles.title}>Joe Cee</h1>
         </div>
