@@ -9,6 +9,8 @@ import Nav from "../components/Nav";
 import Ring from "../components/Ring";
 import introVector from "../public/lineVector.svg";
 import nextBtn from "../public/nextBtn.svg";
+import nameVector from "../public/name.svg";
+import nameMono from "../public/nameMono.svg"
 
 export default function Home() {
   const [isToggled, setToggle] = useState(false);
@@ -27,28 +29,62 @@ export default function Home() {
 
       <main className={styles.main}>
         <Accordion title={"my info"} className={styles.info} />
-        <motion.div className={styles.titleCtnr}>
-          <motion.h1
+        <motion.div 
+          className={styles.titleCtnr} 
+          drag
+          whileHover={{
+                scale: [1, 0.8],
+                rotateX: 80,
+                rotateZ: 120,
+                transition: {
+                  duration: 0.75,
+                  ease: "easeInOut",
+                  damping: 500,
+                },
+                
+              }}
+            
+        >
+          {/* <motion.h1
+            
             whileHover={{
               scale: [1, 0.8],
-              backgroundSize: "400%",
+              backgroundSize: "850%",
               transition: {
                 duration: 0.75,
-                ease: "bounceOut",
+                ease: "easeInOut",
+                damping: 500,
               },
             }}
             className={styles.title}
           >
             Joe Cee
-          </motion.h1>
+          </motion.h1> */}
+          <Image 
+            className={styles.title}
+            
+            src={nameMono}
+            alt="Joe Cee" />
         </motion.div>
-        {/* <Modal isToggled={isToggled} setToggle={setToggle}>
-          <div className={styles.title} animate={{opacity: isToggled }}> contact forms </div>
+        {/* <Modal isT+oggled={isToggled} setToggle={setToggle}>
+          <div 33={styles.title} animate={{opacity: isToggled }}> contact forms </div>
         </Modal> */}
 
-        <div className={styles.ringCtnr}>
+        <motion.div
+          className={styles.ringCtnr}
+          animate={{
+            rotate: 360,
+            transition: {
+              duration: 15,
+              ease: "linear",
+              stiffness: 0,
+              repeat: Infinity,
+              repeatType: "loop",
+            },
+          }}
+        >
           <Ring />
-        </div>
+        </motion.div>
         <section className={styles.introTextCtnr}>
           <h2 className={styles.line1}>Coding simply</h2>
           <div className={styles.introVector}>
