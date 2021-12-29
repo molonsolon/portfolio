@@ -3,17 +3,16 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
-import Modal from "../components/Modal";
 import Accordion from "../components/Accordion";
-import Nav from "../components/Nav";
 import Ring from "../components/Ring";
 import introVector from "../public/lineVector.svg";
 import nextBtn from "../public/nextBtn.svg";
-import nameVector from "../public/name.svg";
-import nameMono from "../public/nameMono.svg"
+import logo from "../public/Logo6x.svg";
+import Link from "next/link";
 
 export default function Home() {
-  const [isToggled, setToggle] = useState(false);
+  const [isNextActive, setIsNextActive] = useState(true);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -25,51 +24,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <button onClick={() => setToggle(true)}>Contact</button> */}
-
       <main className={styles.main}>
+        
         <Accordion title={"my info"} className={styles.info} />
-        <motion.div 
-          className={styles.titleCtnr} 
+        
+        <motion.div
+          className={styles.titleCtnr}
           drag
           whileHover={{
-                scale: [1, 0.8],
-                rotateX: 80,
-                rotateZ: 120,
-                transition: {
-                  duration: 0.75,
-                  ease: "easeInOut",
-                  damping: 500,
-                },
-                
-              }}
-            
+            scale: [1, 0],
+            boxShadow: "0 0 20px green",
+            transition: {
+              duration: 2,
+              ease: "easeInOut",
+              damping: 500,
+            },
+          }}
         >
-          {/* <motion.h1
-            
-            whileHover={{
-              scale: [1, 0.8],
-              backgroundSize: "850%",
-              transition: {
-                duration: 0.75,
-                ease: "easeInOut",
-                damping: 500,
-              },
-            }}
-            className={styles.title}
-          >
-            Joe Cee
-          </motion.h1> */}
-          <Image 
-            className={styles.title}
-            
-            src={nameMono}
-            alt="Joe Cee" />
+          <Link href="/">
+            <a>
+              <Image className={styles.title} src={logo} alt="Joe Cee" />
+            </a>
+          </Link>  
         </motion.div>
-        {/* <Modal isT+oggled={isToggled} setToggle={setToggle}>
-          <div 33={styles.title} animate={{opacity: isToggled }}> contact forms </div>
-        </Modal> */}
-
+        
         <motion.div
           className={styles.ringCtnr}
           animate={{
@@ -94,9 +72,28 @@ export default function Home() {
           <h2 className={styles.line3}>&</h2>
           <h2 className={styles.line4}>b e y o n d</h2>
         </section>
-        <div className={styles.nextCtnr}>
-          <Image src={nextBtn} alt="animated button to go to next page" />
-        </div>
+        
+        <motion.div
+          className={styles.nextCtnr}
+          whileHover={{
+            scale: [1, 1.1, 1.05],
+            transition: {
+              duration: 0.65,
+            },
+          }}
+        >
+        <Link href="/bio">
+          <a>
+            
+            <Image 
+                src={nextBtn} 
+                alt="animated button to go to next page" 
+              />
+          </a>
+        </Link>
+              
+          
+        </motion.div>
       </main>
     </div>
   );

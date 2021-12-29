@@ -9,8 +9,8 @@
             <stop offset="85%" stopColor="#DC05FF" />
           </linearGradient>
   </defs>
-  <g transform="scale(1.4 1.4)" id="Layer_2" data-name="Layer 2" >
-    <g transform="scale(1.4 1.4)" id="Layer_1-2" data-name="Layer 1" fill="white"  >
+  <g  id="Layer_2" data-name="Layer 2" >
+    <g  id="Layer_1-2" data-name="Layer 1" fill="white"  >
       <text class="cls-1" transform="translate(0 32.58301)">
         Joe Cee
       </text>
