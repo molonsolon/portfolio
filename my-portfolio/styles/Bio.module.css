@@ -1,29 +1,63 @@
-.mainSection {
-  display: grid;
-  grid-template-columns: 50vw 50vw;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "title text"
-                        ". text"
-                        "footer footer"
+.homeLink {
+  z-index: -5;
+  position: absolute;
+
 }
 
 .textBoxesCtnr {
   z-index: -1;
-  min-width: 100%;
-  width: 2600px;
-  margin: 0;
-  grid-area: title;
-  column-span: 2;
-}
+  position: absolute;
+  background-color: #10042f;
 
-.textBoxes {
-  min-width: 3000px;
-
-  
+  height: 1350px;
+  width: 2000px;
+  top: -260px;
+  left: -160px;
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 8rem;
+  font-family: 'Poppins';
   z-index: 1;
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: -850px;
+  left: 380px;
+  color: black;
+}
 
+.bioText {
+  font-size: 2rem;
+  color: white;
+  font-family: 'Monoid';
+  position: relative;
+  width: 500px;
+  height: auto;
+  top: -1080px;
+  left: 1100px;
+}
+
+.decorationCtnr {
+  position: absolute;
+}
+
+.vectorCtnr {
+  position: fixed;
+  top: 490px;
+  left: 200px;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  transform: scale(1.2) rotate(-8deg);
+}
+
+.footerDecoration {
+  width: 2850px;
+  height: 1000px;
+  background-color: black;
+  position: absolute;
+  top: 880px;
+  left: -170px;
+  transform: rotate(10deg);
 }
