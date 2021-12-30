@@ -6,6 +6,7 @@ import Image from "next/image";
 import textBoxesFront from "../public/textBoxesFront.svg";
 import lineVectorStretch from "../public/lineVectorStretch.svg";
 import { motion, AnimatePresence } from "framer-motion";
+import nextBtnPlain from "../public/nextBtnPlain.svg";
 
 export const Bio = () => {
   return (
@@ -48,6 +49,18 @@ export const Bio = () => {
             developer teaching myself HTML, CSS, and Javascript. I learn through
             various free online resources and tech docs.
           </p>
+          <motion.div className={styles.nextText}
+            whileHover={{
+            scale: [1, 1.1, 1.05],
+            transition: {
+              duration: 0.65,
+            },
+          }}>
+            <Image
+              src={nextBtnPlain}
+              alt="a button to show more text in biography"
+            />
+          </motion.div>
         </motion.div>
       </section>
       <span className={styles.decorationCtnr}>

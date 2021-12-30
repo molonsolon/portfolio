@@ -25,9 +25,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        
         <Accordion title={"my info"} className={styles.info} />
-        
+
         <motion.div
           className={styles.titleCtnr}
           drag
@@ -45,9 +44,9 @@ export default function Home() {
             <a>
               <Image className={styles.title} src={logo} alt="Joe Cee" />
             </a>
-          </Link>  
+          </Link>
         </motion.div>
-        
+
         <motion.div
           className={styles.ringCtnr}
           animate={{
@@ -72,7 +71,7 @@ export default function Home() {
           <h2 className={styles.line3}>&</h2>
           <h2 className={styles.line4}>b e y o n d</h2>
         </section>
-        
+
         <motion.div
           className={styles.nextCtnr}
           whileHover={{
@@ -82,17 +81,11 @@ export default function Home() {
             },
           }}
         >
-        <Link href="/bio">
-          <a>
-            
-            <Image 
-                src={nextBtn} 
-                alt="animated button to go to next page" 
-              />
-          </a>
-        </Link>
-              
-          
+          <Link href="/bio">
+            <a>
+              <Image src={nextBtn} alt="animated button to go to next page" />
+            </a>
+          </Link>
         </motion.div>
       </main>
     </div>
