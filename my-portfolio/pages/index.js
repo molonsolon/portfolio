@@ -9,6 +9,7 @@ import introVector from "../public/lineVector.svg";
 import nextBtn from "../public/nextBtn.svg";
 import logo from "../public/Logo6x.svg";
 import Link from "next/link";
+import NextPage from "../components/NextPage"
 
 export default function Home() {
   const [isNextActive, setIsNextActive] = useState(true);
@@ -72,21 +73,7 @@ export default function Home() {
           <h2 className={styles.line4}>b e y o n d</h2>
         </section>
 
-        <motion.div
-          className={styles.nextCtnr}
-          whileHover={{
-            scale: [1, 1.1, 1.05],
-            transition: {
-              duration: 0.65,
-            },
-          }}
-        >
-          <Link href="/bio">
-            <a>
-              <Image src={nextBtn} alt="animated button to go to next page" />
-            </a>
-          </Link>
-        </motion.div>
+        <NextPage />
       </main>
     </div>
   );

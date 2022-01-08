@@ -1,0 +1,29 @@
+.bioText {
+  font-size: 1.8rem;
+  color: white;
+  font-family: 'Monoid';
+  position: relative;
+  width: 500px;
+  height: auto;
+  top: -1080px;
+  left: 1100px;
+}
+
+.nextText {
+  z-index: 11;
+  position: absolute;
+  top: 800px;
+  left: 1500px;
+  width: 100px;
+  height: 100px;
+}
+
+.prevText {
+  z-index: 11;
+  rotate: 180deg;
+  position: absolute;
+  top: 795px;
+  left: 1110px;
+  width: 100px;
+  height: 100px;
+}

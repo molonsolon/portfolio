@@ -47,8 +47,8 @@
   position: relative;
   top: -1080px;
   left: 1500px;
-  width: auto;
-  height: auto;
+  width: 100px;
+  height: 100px;
 }
 
 .decorationCtnr {

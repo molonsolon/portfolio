@@ -6,7 +6,8 @@ import Image from "next/image";
 import textBoxesFront from "../public/textBoxesFront.svg";
 import lineVectorStretch from "../public/lineVectorStretch.svg";
 import { motion, AnimatePresence } from "framer-motion";
-import nextBtnPlain from "../public/nextBtnPlain.svg";
+import Slideshow from "../components/Slideshow";
+import NextPage from "../components/NextPage";
 
 export const Bio = () => {
   return (
@@ -44,25 +45,10 @@ export const Bio = () => {
             alt="fun containers for text"
           />
           <h3 className={styles.title}>Hello!</h3>
-          <p className={styles.bioText}>
-            My name is Joseph Coulter. I’m an aspiring professional web
-            developer teaching myself HTML, CSS, and Javascript. I learn through
-            various free online resources and tech docs.
-          </p>
-          <motion.div className={styles.nextText}
-            whileHover={{
-            scale: [1, 1.1, 1.05],
-            transition: {
-              duration: 0.65,
-            },
-          }}>
-            <Image
-              src={nextBtnPlain}
-              alt="a button to show more text in biography"
-            />
-          </motion.div>
+          <Slideshow />
         </motion.div>
       </section>
+      <NextPage />
       <span className={styles.decorationCtnr}>
         <span className={styles.vectorCtnr}>
           <Image
@@ -72,6 +58,7 @@ export const Bio = () => {
         </span>
         <div className={styles.footerDecoration}></div>
       </span>
+      
     </div>
   );
 };
