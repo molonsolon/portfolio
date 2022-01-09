@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/Bio.module.css";
 import Head from "next/head";
@@ -10,6 +10,13 @@ import Slideshow from "../components/Slideshow";
 import NextPage from "../components/NextPage";
 
 export const Bio = () => {
+  const [textPage, setTextPage] = useState(0);
+
+  const pageToParent = (page) => {
+    setTextPage(page);
+    console.log(page);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -45,10 +52,16 @@ export const Bio = () => {
             alt="fun containers for text"
           />
           <h3 className={styles.title}>Hello!</h3>
-          <Slideshow />
+          <Slideshow pageToParent={pageToParent} />
         </motion.div>
       </section>
-      <NextPage />
+      <AnimatePresence>
+        <motion.div>
+          {textPage === 2 && <NextPage link="/portfolio"/>}
+        </motion.div>
+
+      </AnimatePresence>
+
       <span className={styles.decorationCtnr}>
         <span className={styles.vectorCtnr}>
           <Image
@@ -58,7 +71,6 @@ export const Bio = () => {
         </span>
         <div className={styles.footerDecoration}></div>
       </span>
-      
     </div>
   );
 };

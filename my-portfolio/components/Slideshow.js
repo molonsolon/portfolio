@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/Slideshow.module.css";
 import nextBtnPlain from "../public/nextBtnPlain.svg";
@@ -14,13 +14,18 @@ const PAGES = [
    I fell in love with coding because it allowed me to combine these art forms and share their synthesis in an accessible form.`,
 ];
 
-export const Slideshow = () => {
+export const Slideshow = ({ pageToParent }) => {
   const [[page, direction], setPage] = useState([0, 0]);
 
   const paginate = (direction) => {
     setPage([page + direction, direction]);
-    console.log(page);
   };
+  
+  
+  useEffect(() => {
+    console.log("effect hit", page);
+    pageToParent(page)
+  }, [page, pageToParent]);
 
   const variants = {
     enter: {
@@ -48,7 +53,9 @@ export const Slideshow = () => {
         </motion.p>
         {page < 2 && (
           <motion.div
-            onClick={() => paginate(1)}
+            onClick={() => {
+              paginate(1);
+            }}
             className={styles.nextText}
             whileHover={{
               x: 10,

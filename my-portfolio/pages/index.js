@@ -12,7 +12,6 @@ import Link from "next/link";
 import NextPage from "../components/NextPage"
 
 export default function Home() {
-  const [isNextActive, setIsNextActive] = useState(true);
 
   return (
     <div className={styles.container}>
@@ -73,7 +72,7 @@ export default function Home() {
           <h2 className={styles.line4}>b e y o n d</h2>
         </section>
 
-        <NextPage />
+        <NextPage link="/bio" />
       </main>
     </div>
   );
