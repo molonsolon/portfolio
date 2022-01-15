@@ -12,7 +12,7 @@
 .backgroundWave {
   overflow-x: hidden;
   background-size: cover;
-  background-image: url(../public/Bg3dWave.svg);
+  background-image: url(../public/Bg3dWave.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
   position: fixed;
