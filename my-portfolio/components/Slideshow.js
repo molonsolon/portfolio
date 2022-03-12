@@ -9,7 +9,7 @@ const PAGES = [
    In 2019, I earned a degree in English from Lewis & Clark College. I'm currently working as a Laborer at Otis Construction.
   `,
   `I have been teaching myself HTML, CSS, and Javascript since July of 2021. 
-   I learn using tech docs and resources such as Free Code Academy and The Odin Project. Currently, I'm boosting my skills in Next.js.`,
+   I learn using tech docs and resources such as Free Code Academsy and The Odin Project. Currently, I'm boosting my skills in Next.js.`,
   `I balance my passion for coding with music, video art, and writing. 
    I fell in love with coding because it allowed me to combine these art forms and share their synthesis in an accessible form.`,
 ];

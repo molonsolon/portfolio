@@ -2,5 +2,17 @@
   position: absolute;
   top: 750px;
   left: 1500px;
+  
+}
 
+@media only screen and (max-width:1000px) {
+  .nextCtnr {
+    left: 100px;
+    top: 550px;
+    width: auto;
+  }
+
+  .linkCtnr > a {
+    
+  }
 }

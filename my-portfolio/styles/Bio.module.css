@@ -86,3 +86,11 @@
   left: -170px;
   transform: rotate(10deg);
 }
+
+@media only screen and (max-width:748px) {
+  .textBoxesCtnr {
+    width: 400px;
+    left: 00px;
+    top: 50px;
+  }
+}

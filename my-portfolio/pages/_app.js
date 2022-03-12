@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps, router}) {
           
         }}
       >
-        <Component {...pageProps} key={router.rout} />
+        <Component {...pageProps} key={router.route} />
       </motion.div>
     </AnimatePresence>
   );

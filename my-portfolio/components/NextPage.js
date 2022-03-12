@@ -21,7 +21,7 @@ export const NextPage = ({ link }) => {
       }}
     >
       <Link href={link}>
-        <a>
+        <a className={styles.linkCtnr}>
           <Image src={nextBtn} alt="animated button to go to next page" />
         </a>
       </Link>
