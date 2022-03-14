@@ -3,7 +3,6 @@ import Link from "next/link";
 import styles from "../styles/Bio.module.css";
 import Head from "next/head";
 import Image from "next/image";
-import textBoxesFront from "../public/textBoxesFront.png";
 import lineVectorStretch from "../public/lineVectorStretch.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import Slideshow from "../components/Slideshow";
@@ -32,6 +31,8 @@ export const Bio = () => {
         <a className={styles.homeLink}>Home</a>
       </Link>
       <section className={styles.mainSection}>
+        <h3 className={styles.title}>Hello!</h3>
+
         <motion.div
           animate={{
             x: [0, 5, 10],
@@ -45,30 +46,24 @@ export const Bio = () => {
           exit={{ x: 0, y: 0 }}
           className={styles.textBoxesCtnr}
         >
-          <Image
-            className={styles.textBoxes}
-            src={textBoxesFront}
-            alt="fun containers for text"
-          />
-          <h3 className={styles.title}>Hello!</h3>
-          <Slideshow pageToParent={pageToParent} />
+            {/* <Image src={textBox} alt="fun containers for text" /> */}
+            <Slideshow pageToParent={pageToParent} />
         </motion.div>
-      </section>
-      <AnimatePresence>
-        <motion.div>
-          {textPage === 2 && <NextPage link="/portfolio" />}
-        </motion.div>
-      </AnimatePresence>
-
-      <span className={styles.decorationCtnr}>
-        <span className={styles.vectorCtnr}>
-          <Image
-            src={lineVectorStretch}
-            alt="orange curly line seperating the bottom and top halves of the page"
-          />
+        <AnimatePresence>
+          <motion.div>
+            {textPage === 2 && <NextPage link="/portfolio" />}
+          </motion.div>
+        </AnimatePresence>
+        <span className={styles.decorationCtnr}>
+          <span className={styles.vectorCtnr}>
+            <Image
+              src={lineVectorStretch}
+              alt="orange curly line seperating the bottom and top halves of the page"
+            />
+          </span>
+          <div className={styles.footerDecoration}></div>
         </span>
-        <div className={styles.footerDecoration}></div>
-      </span>
+      </section>
     </div>
   );
 };

@@ -1,29 +1,79 @@
+.slideshowCtnr {
+  width: 1200px;
+  grid-area: textBox;
+}
+.textBox {
+  position: relative;
+}
 .bioText {
   font-size: 1.8rem;
   color: white;
-  font-family: 'Monoid';
+  font-family: "Monoid";
+  height: 335px;
   position: relative;
-  width: 500px;
-  height: auto;
-  top: -1080px;
-  left: 1110px;
+  top: -825px;
+  width: 40%;
+  left: 375px;
+  line-height: 2.3rem;
+}
+.buttonCtnr {
+  position: relative;
+  top: -800px;
+  display: flex;
+  flex-direction: row;
+  left: 700px;
 }
 
 .nextText {
   z-index: 11;
   position: absolute;
-  top: 840px;
-  left: 1550px;
-  width: 100px;
-  height: 100px;
 }
 
 .prevText {
   z-index: 11;
   rotate: 180deg;
   position: absolute;
-  top: 840px;
-  left: 1160px;
-  width: 100px;
-  height: 100px;
+  left: -300px;
+}
+
+@media only screen and (max-width: 1280px) {
+}
+
+@media only screen and (max-width: 748px) {
+  .slideshowCtnr {
+    width: 700px;
+  }
+  .bioText {
+    font-size: 0.8rem;
+    color: white;
+    font-family: "Monoid";
+    height: 335px;
+    position: relative;
+    top: -490px;
+    width: 35%;
+    left: 225px;
+    line-height: 1.4rem;
+  }
+  .buttonCtnr {
+    position: relative;
+    top: -620px;
+    display: flex;
+    flex-direction: row;
+    left: 390px;
+  }
+
+  .nextText {
+    z-index: 11;
+    position: absolute;
+    width: 70px;
+  }
+
+  .prevText {
+    z-index: 11;
+    rotate: 180deg;
+    position: absolute;
+    width: 70px;
+    left: -150px;
+    top: -5px;
+  }
 }
