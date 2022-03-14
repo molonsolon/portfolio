@@ -46,8 +46,8 @@ export const Bio = () => {
           exit={{ x: 0, y: 0 }}
           className={styles.textBoxesCtnr}
         >
-            {/* <Image src={textBox} alt="fun containers for text" /> */}
-            <Slideshow pageToParent={pageToParent} />
+          {/* <Image src={textBox} alt="fun containers for text" /> */}
+          <Slideshow pageToParent={pageToParent} />
         </motion.div>
         <AnimatePresence>
           <motion.div>
