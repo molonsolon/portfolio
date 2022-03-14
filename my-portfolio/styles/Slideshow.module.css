@@ -27,6 +27,7 @@
 .nextText {
   z-index: 11;
   position: absolute;
+  cursor: pointer;
 }
 
 .prevText {
@@ -34,6 +35,9 @@
   rotate: 180deg;
   position: absolute;
   left: -300px;
+  top: -5px;
+  cursor: pointer;
+
 }
 
 @media only screen and (max-width: 1280px) {

@@ -50,7 +50,7 @@ export const Bio = () => {
           <Slideshow pageToParent={pageToParent} />
         </motion.div>
         <AnimatePresence>
-          <motion.div>
+          <motion.div className={styles.nextBtn}>
             {textPage === 2 && <NextPage link="/portfolio" />}
           </motion.div>
         </AnimatePresence>

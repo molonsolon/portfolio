@@ -1,8 +1,6 @@
 .nextCtnr {
-  position: absolute;
-  top: 750px;
-  left: 1500px;
-  
+  position: relative;
+  z-index: 10;
 }
 
 @media only screen and (max-width:1000px) {
@@ -12,7 +10,5 @@
     width: auto;
   }
 
-  .linkCtnr > a {
-    
-  }
+  
 }

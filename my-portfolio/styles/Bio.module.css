@@ -16,19 +16,20 @@
   z-index: 10;
   display: grid;
   grid-template-columns: 10% 80% 10%;
-  grid-template-rows: 0% 20% 33%;
+  grid-template-rows: auto 800px auto;
   background-color: #10042f;
   grid-template-areas:
     ". title ."
-    ". textBox ."
+    ". textBox next"
     "decoration decoration decoration";
+  justify-items: center;
 }
 
 .textBoxesCtnr {
   z-index: 1;
   background-color: #10042f;
   grid-area: textBox;
-  margin-top: -200px;
+  margin-top: -300px;
   height: auto;
   display: grid;
   justify-content: center;
@@ -58,18 +59,19 @@
   height: auto;
 } */
 
-.nextText {
-  z-index: 11;
+.nextBtn {
   position: relative;
-  
-  width: 100px;
-  height: 100px;
+  grid-area: textBox;
+  justify-self: center;
+  left: 400px;
+  top: 620px;
 }
 
 .decorationCtnr {
   grid-row: 3;
   grid-column: 1 span 3;
   z-index: 2;
+  margin-top: 500px;
 
 }
 
@@ -97,6 +99,15 @@
 }
 
 @media only screen and (max-width: 748px) {
-  
+  .textBoxesCtnr {
+    margin-top: -200px;
+    
+  }
+  .nextBtn {
+    top: -200px;
+    left: -30%;
+
+
+  }
   
 }
