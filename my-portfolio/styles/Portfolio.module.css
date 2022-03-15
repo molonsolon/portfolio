@@ -1,7 +1,6 @@
-
 .container {
-  background-color:#10042f;
-  background-size:cover;
+  background-color: #10042f;
+  background-size: cover;
   background-attachment: local;
   overflow-x: hidden;
   height: auto;
@@ -22,47 +21,150 @@
 }
 .gridLayout {
   display: grid;
-  padding-left: 5vw;
-  grid-template-columns: 35vw 35vw;
-  grid-template-rows: 30vh 50vh 50vh 50vh;
-  grid-template-areas: "title title"
-                       "tic ."
-                       ". tac"
-                       ". ."
-                        ". .";
-  
-  
-  row-gap: 1rem;
+  width: 100vw;
+  height: auto;
+  grid-template-columns: 10% 30% 0% 30% 10%;
+  grid-template-rows: 33.33vh repeat(8, 30vh);
+  grid-template-areas:
+    ". . title . ."
+    ". tic . . ."
+    ". . . tac  ."
+    ". city . . ."
+    ". . . sounds ."
+    ". calc . . ."
+    ". . . game ."
+    ". code . . ."
+    ". . . pen .";
+  row-gap: 20px;
   z-index: 1;
-  column-gap: 20vw;
+  column-gap: 5%;
+  justify-self: center;
+  align-items: center;
 }
 
 .title {
   display: grid;
-  grid-area: "title";
-  grid-column: span 2;
+  grid-column: 3;
+
   z-index: 1;
   color: white;
   font-size: 7rem;
   justify-self: center;
-  font-family: 'Poppins'
+  font-family: "Poppins";
+}
 
+.displayBoxes > p {
+  z-index: 3;
+  justify-self: center;
+}
+
+.displayBoxes {
+  z-index: 2;
+  width: 700px;
+  height: 700px;
+  align-self: center;
+  align-items: center;
+  justify-self: center;
+  color: white;
+  background-image: url("../public/textBox.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: -100px; */
 }
 
 .ticTacTitle {
   display: grid;
+  position: relative;
   grid-area: tic;
-  background: white;
-  z-index: 2;
-  
 }
 
 .ticTacDescription {
   display: grid;
+  position: relative;
   grid-area: tac;
-  background: white;
-  margin-top: -35%;
-  margin-bottom: 35%;
-  z-index: 2;
-  
+  margin-top: -200px;
+}
+
+.citySoundsTitle {
+  grid-area: city;
+  position: relative;
+  display: grid;
+}
+
+.citySoundsDescription {
+  grid-area: sounds;
+  position: relative;
+  display: grid;
+  margin-top: -200px;
+}
+
+.calcTitle {
+  grid-area: calc;
+  position: relative;
+  display: grid;
+}
+
+.calcDescription {
+  grid-area: game;
+  position: relative;
+  display: grid;
+  margin-top: -200px;
+}
+
+.codePenTitle {
+  grid-area: code;
+  position: relative;
+  display: grid;
+}
+.codePenDescription {
+  grid-area: pen;
+  position: relative;
+  display: grid;
+  margin-top: -200px;
+}
+
+@media only screen and (max-width: 1080px) {
+  .displayBoxes {
+    width: 620px;
+    height: 620px;
+  }
+}
+@media only screen and (max-width: 748px) {
+  .title {
+    grid-column: 2;
+    font-size: 4.5rem;
+  }
+
+  .displayBoxes {
+    width: 500px;
+    height: 500px;
+  }
+  .codePenDescription {
+    margin-top: -50px;
+  }
+  .calcDescription {
+    margin-top: -50px;
+  }
+
+  .citySoundsDescription {
+    margin-top: -50px;
+  }
+
+  .ticTacDescription {
+    margin-top: -50px;
+  }
+  .gridLayout {
+    grid-template-columns: 40% 10% 40%;
+    grid-template-areas:
+      ".  title  ."
+      ". tic ."
+      ". tac  ."
+      ". city ."
+      ".  sounds ."
+      ". calc ."
+      ". game ."
+      ". code ."
+      ". pen .";
+    row-gap: 40px;
+  }
 }

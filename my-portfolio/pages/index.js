@@ -7,7 +7,7 @@ import Accordion from "../components/Accordion";
 import Ring from "../components/Ring";
 import introVector from "../public/lineVector.svg";
 import nextBtn from "../public/nextBtn.svg";
-import logo from "../public/Logo6x.svg";
+import logo from "../public/portfolio-logo.png";
 import Link from "next/link";
 import NextPage from "../components/NextPage"
 

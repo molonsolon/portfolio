@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Steps-Mono";
+  src: url('../public/Steps-Mono.otf'),
+       url('../public/Steps-Mono-Thin.otf');
+}
+
 .container {
   background-image: linear-gradient(
       150deg,
