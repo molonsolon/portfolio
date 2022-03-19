@@ -200,4 +200,7 @@
     justify-self: center;
     align-self: center;
   }
+  .titleCtnr {
+    margin-left: 15px;
+  }
 }
