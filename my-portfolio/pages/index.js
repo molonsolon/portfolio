@@ -71,8 +71,10 @@ export default function Home() {
           <h2 className={styles.line3}>&</h2>
           <h2 className={styles.line4}>b e y o n d</h2>
         </section>
-
+        <div className={styles.nextButtonCtnr}>
         <NextPage link="/bio" />
+
+        </div>
       </main>
     </div>
   );

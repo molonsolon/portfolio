@@ -41,7 +41,7 @@
 
 .title {
   font-size: 8rem;
-  font-family: "Poppins";
+  font-family: "Manrope";
   z-index: 2;
   width: auto;
   height: auto;
@@ -102,20 +102,28 @@
   transform: rotate(7deg);
 }
 
-@media only screen and (max-width:1280px) {
-
+@media only screen and (max-width:1080px) {
+  .nextBtn {
+    grid-area: textBox;
+    width: auto;
+    margin: 0;
+    left: 0;
+  }
 }
 
 @media only screen and (max-width: 748px) {
   .textBoxesCtnr {
     margin-top: -200px;
-    
   }
   .nextBtn {
-    top: -140px;
-    left: -30%;
-
-
+    grid-area: textBox;
+    width: 50%;
+    margin: 0;
+    left: 0;
+    top: 45%;
+  }
+  .decorationCtnr {
+    margin-top: -70%;
   }
   
 }

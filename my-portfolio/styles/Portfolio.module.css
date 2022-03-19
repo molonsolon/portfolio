@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Steps-Mono";
+  src: url('../public/Manrope-Regular.ttf');
+}
+
 .container {
   background-color: #10042f;
   background-size: cover;
@@ -45,12 +50,11 @@
 .title {
   display: grid;
   grid-column: 3;
-
+  font-family: "Manrope";
   z-index: 1;
   color: white;
   font-size: 7rem;
   justify-self: center;
-  font-family: "Poppins";
 }
 
 .displayBoxes > p {

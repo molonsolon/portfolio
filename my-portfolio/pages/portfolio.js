@@ -32,7 +32,7 @@ export const Portfolio = () => {
           <div className={`${styles.ticTacTitle} ${styles.displayBoxes}`}>
             {/* <Image src={textBox} alt="stylized container for text" /> */}
             <p>
-              Tic-Tac-Toe
+              Tic-Tac-Overdrive
             </p>
           </div>
 

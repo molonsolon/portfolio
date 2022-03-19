@@ -35,14 +35,13 @@
 
 .titleCtnr {
   grid-area: title;
-  padding-left: 2rem;
-  height: 80%;
   width: 120%;
+  height: 60%;
   z-index: 1;
-  padding: 1rem;
-  padding-left: 2rem;
-  padding-top: 2rem;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
   min-width: 100%;
+  padding: 0.5rem;
 }
 
 .centerpiece {
@@ -127,26 +126,32 @@
   padding-right: 2rem;
 }
 
-@media only screen and (max-width:1000px) {
+.nextButtonCtnr {
+  grid-area: next;
+  margin-left: 50px;
+  margin-top: -10px;
+}
+
+@media only screen and (max-width:1080px) {
   .titleCtnr {
     width: 200%;
   }
   
   .line1 {
-    font-size: 2rem;
-    width: 300px;
-    margin-left: 70px;
+    font-size: 2.2rem;
+    
   }
   .line2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .line3 {
-    font-size: 4rem;
+    font-size: 6rem;
+    margin-left: 120px;
   }
   .line4 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-top: -5%;
-    margin-right: -50%;
+    margin-right: -48%;
     width: auto;
     height: 100%;
   }
@@ -159,4 +164,40 @@
     
   }
   
+  .nextButtonCtnr {
+    grid-area: next;
+    width: auto;
+    margin-left: -50px;
+    margin-top: -50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .line1 {
+    font-size: 2rem;
+    width: 300px;
+    margin-left: 70px;
+  }
+  .line2 {
+    font-size: 2rem;
+  }
+  .line3 {
+    font-size: 4rem;
+    margin-left: -10px;
+  }
+  .line4 {
+    font-size: 2.5rem;
+    margin-top: -5%;
+    margin-right: -50%;
+    width: auto;
+    height: 100%;
+  }
+  .nextButtonCtnr {
+    width: auto;
+    grid-column: 2;
+    grid-row: 3;
+    margin: 0;
+    justify-self: center;
+    align-self: center;
+  }
 }
